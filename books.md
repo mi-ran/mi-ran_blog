@@ -15,7 +15,7 @@ active: archive_books
   <h2 class="category-key" id="{{ t | downcase }}">{{ t | capitalize }}</h2>
 
   <ul class="year">
-    {% for post in posts %}
+    {% for post in posts_books %}
       {% if post.tags contains t %}
         <li>
           {% if post.lastmod %}
