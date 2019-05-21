@@ -7,7 +7,7 @@ permalink: /career/
 summary: "my career"
 active: career
 ---
-# My Working
+# My Career
 ***
 ## [synapsoft]
 #### DocumentModel
