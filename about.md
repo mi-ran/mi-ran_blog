@@ -1,11 +1,11 @@
 ---
 bg: "owl.jpg"
 layout: page
-title: "About"
+title: "Career"
 crawlertitle: "Why and how this blog was created"
-permalink: /about/
-summary: "About this blog"
-active: about
+permalink: /career/
+summary: "my career"
+active: career
 ---
 # My Working
 ***
