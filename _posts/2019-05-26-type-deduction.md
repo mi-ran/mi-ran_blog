@@ -112,6 +112,27 @@ vector a = {1,2,3.0}; // 오류! std::initializer_list<T>에서 T를 추론할 �
 auto a = {1};
 {% endhighlight %}
 
-결론적으로 볼때 a는 `initializer_list<int>`로 추론되게 된다. 이는 일반적으로 `int a = {1}`과는 다르게 타입 추론이 한번 더 일어나기 때문이다. a의 타입을 추론하기 위해서 {1}을 확인하게 되는데 이 과정에서 중괄호 형태로 초기화되는 경우는 무조건 std::initializer_list로 추론된다. 그 다음 중괄호 안의 내용물이 같은 타입의 요소인지를 확인하는 추론을 하게 되는 것이다.
+결론적으로 볼때 a는 `initializer_list<int>`로 추론되게 된다.
+이는 일반적으로 `int a = {1}`과는 다르게 타입 추론이 한번 더 일어나기 때문이다.
+a의 타입을 추론하기 위해서 {1}을 확인하게 되는데 이 과정에서 중괄호 형태로 초기화되는 경우는 무조건 std::initializer_list로 추론된다.
+그 다음 중괄호 안의 내용물이 같은 타입의 요소인지를 확인하는 추론을 하게 되는 것이다.
 
 ### decltype
+decltype은 주어진 이름이나 표현식의 형식을 알려준다.
+c++11에서 주로 함수의 반환 형식을 그 매개변수 형식들에 의존하는 함수 템플릿을 선언할 때 주로 쓰인다.
+decltype의 반환 값을 거의 우리가 기본적으로 생각하는 값에서 변하지 않는다.
+
+{% highlight c++ %}
+const int i = 0; // decltype(i)는 const int
+vector<int> v; // decltype(v)는 vector<int>
+{% endhilight %}
+
+decltype을 이름에 적용하면 그 이름에 대해 선언한 형식이 산출된다. 하지만 이름보다 복잡한 왼쪽값에 대해서는 일반적으로 항상 왼쪽값 레퍼런스를 반환한다.
+
+{% highlight c++ %}
+int x = 0;
+decltype(x); // int
+decltype((x)); // int&
+{% endhighlight %}
+
+이러한 규칙은 잘못해서 지역변수에 대한 참조를 반환하게 하는 실수를 야기할 수 있다.
