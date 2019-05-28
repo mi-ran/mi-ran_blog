@@ -125,7 +125,7 @@ decltype의 반환 값을 거의 우리가 기본적으로 생각하는 값에�
 {% highlight c++ %}
 const int i = 0; // decltype(i)는 const int
 vector<int> v; // decltype(v)는 vector<int>
-{% endhilight %}
+{% endhighlight %}
 
 decltype을 이름에 적용하면 그 이름에 대해 선언한 형식이 산출된다. 하지만 이름보다 복잡한 왼쪽값에 대해서는 일반적으로 항상 왼쪽값 레퍼런스를 반환한다.
 
