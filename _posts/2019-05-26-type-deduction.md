@@ -113,8 +113,11 @@ auto a = {1};
 {% endhighlight %}
 
 결론적으로 볼때 a는 `initializer_list<int>`로 추론되게 된다.
+
 이는 일반적으로 `int a = {1}`과는 다르게 타입 추론이 한번 더 일어나기 때문이다.
+
 a의 타입을 추론하기 위해서 {1}을 확인하게 되는데 이 과정에서 중괄호 형태로 초기화되는 경우는 무조건 std::initializer_list로 추론된다.
+
 그 다음 중괄호 안의 내용물이 같은 타입의 요소인지를 확인하는 추론을 하게 되는 것이다.
 
 ### decltype
@@ -135,4 +138,12 @@ decltype(x); // int
 decltype((x)); // int&
 {% endhighlight %}
 
-이러한 규칙은 잘못해서 지역변수에 대한 참조를 반환하게 하는 실수를 야기할 수 있다.
+이러한 규칙은 잘못해서 지역변수에 대한 참조를 반환하게 하는 실수를 야기할 수 있다. 아래와 같이 말이다..
+
+{% highlight c++ %}
+decltype(auto) f1()
+{
+    int x = 0;
+    return (x); //!!!
+}
+{% endhighlight %}
