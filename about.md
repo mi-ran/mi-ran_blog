@@ -2,63 +2,44 @@
 bg: "owl.jpg"
 layout: page
 title: "Career"
-crawlertitle: "Why and how this blog was created"
+crawlertitle: "My working"
 permalink: /career/
 summary: "my career"
 active: career
 ---
-# My Career
-***
-## [synapsoft]
-#### DocumentModel
-
-워드, 슬라이드, 셀 등의 문서를 편집하는 프로젝트입니다. 웹오피스의 내부에 들어가는 문서편집 프로젝트입니다.
-
-주로 워드와 셀의 편집을 작업하였습니다. 셀은 MS에서 제공하는 것처럼 함수, 조건부서식 등의 기능도 구현하였습니다.
-- Tech
-	- ProtoBuf
-	- C++
-	- CMake
-
-#### Importer
-
-MS 문서 및 한글 문서를 내부 모델로 바꾸는 프로젝트입니다. Importer에 의해서 내부 모델로 바뀐 문서는 DocumentModel에 의해 편집 될 수 있습니다.
-
-이미지 뷰어, html 뷰어와 같이 문서를 오피스가 없어도 볼 수 있도록 하는 제품에 주로 함께 사용되는 프로젝트입니다.
-
-xls(MS의 셀 포맷)과 docx(MS의 워드 포맷)을 주로 작업하였습니다. 그리고 Importer의 결과가 항상 같게 유지 되는지 확인하기 위해 테스트를 자동화하여, 품질을 유지하는 작업도 함께 수행하였습니다.
-- Tech
-	- C++
-	- CMake
-	- Python
-	- Shell script
-
-#### Exporter
-
-외부 문서포맷을 내부 모델로 바꾸는 Importer와 반대로 내부 모델을 외부 문서포맷으로 바꾸는 프로젝트입니다. 주로 오피스에서 저장하기 기능으로 많이 사용됩니다.
-- Tech
-	- C++
-	- CMake
-
-*****
-
-### SlackBot
-
-슬랙을 통해 업무의 커뮤니케이션을 진행하고 있습니다. 장난감 삼아 slack봇을 만들어서 슬랙방에서 사용하고 있습니다.
-주요기능은 노래 틀어주기(노래 제목만 입력), 알람, 인사하기, 도움말 등입니다.
-구조적으로 기능을 추가하기에 힘들지 않게 만들었기 때문에 새로운 기능을 추가하기에 어렵지 않습니다.
-- Tech
-	- Python (Flask)
-
-### ETC
-
-- gitlab
-	- 위의 프로젝트들은 gitlab으로 관리하고 있습니다. 하나의 브랜치가 master에 머지될 때마다 CI툴(Jenkins)를 통해 빌드가 문제없이 통과되는지 확인하는 작업을 거칩니다.
-- CI(Jenkins)
-	- 메모리 릭과 같은 문제가 발생하지 않는지, 매일 Jenkins를 이용해서 sanitizer를 돌려 확인하고 있습니다.
-- 배포 자동화
-	- 배포하는 로직을 스크립트로 관리하여 테그 이름만 입력하면 그에 맞게 각 프로젝트의 테그 브랜치를 따도록 관리 하고 있습니다.
-
-
-*****
+<head>
+	<title> My Working</title>
+	<meta charset="utf-8"/>
+	<style type=text/css>
+		p.bodyText{
+			line-height:20px;
+		}
+	</style>
+</head>
+<body>
+	<!-- Synap Viewer -->
+	<h1>Synap Viewer<p style="font-size:10px">2016.01 ~ </p></h1>
+	<img src="assets/images/synapViewer_icon.png" style="float:right;" width="200px"/>
+	<p class="bodyText"> 사이냅 뷰어는 MS문서 및 한글 문서의 내용을 오피스 프로그램 없이 쉽게 확인할 수 있도록 하는 프로그램입니다. 2016년 부터 개발 중이며 점점 기능을 늘려가는 중입니다. 사이냅 뷰어 중 제가 주로 개발하는 부분은 DocumentModel과 Importer입니다.</p>
+	<h3>DocumentModel <p style="font-size:10px">문서를 쉽게 랜더링 하기 위한 내부 모델</p></h3>
+	<p class="bodyText">c++와 protobuf를 이용하여 만들었습니다.</p>
+	<h3>Importer <p style="font-size:10px">문서를 내부모델로 바꾸는 프로젝트</p></h3>
+	<p class="bodyText">c++을 이용하여 만들어졌으며, cmake로 빌드를 관리합니다. 품질 관리를 위해 shell script, python, Jenkins를 이용해서 리그레션 테스트를 수행하고 있습니다. 또 코드의 품질을 위해 docker를 이용해서 sanitizer를 매일 확인 하고 있습니다.</p>
+	<!-- Synap Office -->
+	<h1>Synap Office <p style="font-size:10px">2016.01 ~ </p></h1>
+	<img src="assets/images/synapOffice_icon.png" style="float:right;" width="200px"/>
+	<p class="bodyText"> 사이냅 오피스는 설치가 필요없이 언제나 문서를 쉽게 편집할 수 있도록 합니다. 현재 네이버 오피스로 서비스되고 있으며, word/slide/cell/form의 포맷을 지원합니다. 오피스를 ms문서, 아래아한글 등의 문서를 내부 모델로 변경하여 편집합니다. 제가 개발에 참여한 부분은 Importer와 DocumentModel, Exporter 부분입니다. </p>
+	<h3>Importer <p style="font-size:10px">문서를 내부모델로 바꾸는 프로젝트</p></h3>
+	<p class="bodyText">c++을 이용해서 만들었으며, cmake로 빌드합니다. 오피스에서 문서를 열면 임포터는 내부모델을 만들어서 반환하게 됩니다.</p>
+	<h3>DocumentModel <p style="font-size:10px">문서를 쉽게 편집 할 수 있게 하기 위한 내부 모델</p></h3>
+	<p class="bodyText">c++와 protobuf를 이용하여 만들었습니다. DocumentModel 프로젝트는 내부 모델만이 아니라 문서를 편집 할 수 있도록 편집 api를 함께 제공합니다. 편집 api들은 cxx테스트를 이용해서 테스트 코드를 작성하여 관리 하고 있습니다.</p>
+	<h3>Exporter <p style="font-size:10px">사이냅 오피스에서 편집한 문서를 다시 저장하는 프로젝트</p><h3>
+	<p class="bodyText">c++을 이용하여 만들었으며, cmake로 빌드합니다. 오피스에서 문서를 편집한 후 다시 문서를 저장할 때 사용하는 프로젝트로, 내부 모델을 다시 ms 또는 아래아한글의 포맷으로 바꾸어 저장해 줍니다. 이렇게 저장된 문서는 ms office,  한글과 컴퓨터 프로그램으로 열어볼 수 있습니다.</p>
+	<!--Synap Editor -->
+	<h1>Synap Editor <p style="font-size:10px"> 2017.11 ~ </p></h1>
+	<img src="assets/images/synapEditor_icon.png" style="float:right;" width="200px"/>
+	<p class="bodyText"> 사이냅 에디터는 문서임포트 기능을 탑제한 에디터입니다. 현재 워드(ms, 아래아한글), 셀 문서를 임포트 해서 사용할 수 있습니다. 문서 임포트 기능은 기존의 Importer 프로젝트의 결과물을 에디터에 맞도록 수정하는 방향으로 구현되었습니다.</p>
+	<h3>SedocConverter <p style="font-size:10px">임포터의 결과를 에디터에 맞도록 수정하는 프로젝트</p></h3>
+	<p class="bodyText">c++을 이용하여 만들었으며, 에디터에서 표현할 수 없는 기능들을 제외하고 도형이나 워드아트 등을 이미지로 바꾸는 등의 역할을 합니다.</p>
+</body>
 
