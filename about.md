@@ -10,11 +10,6 @@ active: career
 <head>
 	<title> My Working</title>
 	<meta charset="utf-8"/>
-	<style type=text/css>
-		p.bodyText{
-			line-height:20px;
-		}
-	</style>
 </head>
 <body>
 	<!-- Synap Viewer -->
