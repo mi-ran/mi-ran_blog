@@ -20,7 +20,6 @@ active: career
 	<p class="bodyText">c++와 protobuf를 이용하여 만들었습니다.</p>
 	<h3>Importer <p style="font-size:10px">문서를 내부모델로 바꾸는 프로젝트</p></h3>
 	<p class="bodyText">c++을 이용하여 만들어졌으며, cmake로 빌드를 관리합니다. 품질 관리를 위해 shell script, python, Jenkins를 이용해서 리그레션 테스트를 수행하고 있습니다. 또 코드의 품질을 위해 docker를 이용해서 sanitizer를 매일 확인 하고 있습니다.</p>
-	<br/>
 	<!-- Synap Office -->
 	<h1>Synap Office <p style="font-size:10px">2016.01 ~ </p></h1>
 	<img src="assets/images/synapOffice_icon.png" style="float:right;" width="200px"/>
@@ -29,9 +28,8 @@ active: career
 	<p class="bodyText">c++을 이용해서 만들었으며, cmake로 빌드합니다. 오피스에서 문서를 열면 임포터는 내부모델을 만들어서 반환하게 됩니다.</p>
 	<h3>DocumentModel <p style="font-size:10px">문서를 쉽게 편집 할 수 있게 하기 위한 내부 모델</p></h3>
 	<p class="bodyText">c++와 protobuf를 이용하여 만들었습니다. DocumentModel 프로젝트는 내부 모델만이 아니라 문서를 편집 할 수 있도록 편집 api를 함께 제공합니다. 편집 api들은 cxx테스트를 이용해서 테스트 코드를 작성하여 관리 하고 있습니다.</p>
-	<h3>Exporter <p style="font-size:10px">사이냅 오피스에서 편집한 문서를 다시 저장하는 프로젝트</p><h3>
+	<h3>Exporter <p style="font-size:10px">사이냅 오피스에서 편집한 문서를 다시 저장하는 프로젝트</p></h3>
 	<p class="bodyText">c++을 이용하여 만들었으며, cmake로 빌드합니다. 오피스에서 문서를 편집한 후 다시 문서를 저장할 때 사용하는 프로젝트로, 내부 모델을 다시 ms 또는 아래아한글의 포맷으로 바꾸어 저장해 줍니다. 이렇게 저장된 문서는 ms office,  한글과 컴퓨터 프로그램으로 열어볼 수 있습니다.</p>
-	<br/>
 	<!--Synap Editor -->
 	<h1>Synap Editor <p style="font-size:10px"> 2017.11 ~ </p></h1>
 	<img src="assets/images/synapEditor_icon.png" style="float:right;" width="200px"/>
